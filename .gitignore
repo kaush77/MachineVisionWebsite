@@ -1,0 +1,21 @@
+# ignore save pickle files
+
+*.pickle
+*.h5
+*.pkl
+
+CNNModel.pickle
+DenseNet121.pickle
+model_resnet50.pickle
+svm_resnet50.pickle
+
+CNNModel.h5
+CNNModel.pkl
+DenseNet121.h5
+DenseNet121.pkl
+model_resnet50.h5
+model_resnet50.pkl
+svm_resnet50.h5
+svm_resnet50.pkl
+
+
