@@ -106,6 +106,7 @@ def load_image(filename):
 
 # class_mapping = {0: 'cardboard', 1: 'glass', 2: 'metal', 3: 'paper', 4: 'plastic', 5: 'trash'}
 class_mapping = {0: 'cardboard', 1: 'glass', 2: 'metal', 3: 'paper', 4: 'plastic'}
+class_mapping_resnet50 = {0: 'glass', 1: 'metal', 2: 'paper', 3: 'plastic'}
 
 def predict_cnn_model(image):
     loaded_model = load_model("model/CNNModel.h5") 
@@ -126,7 +127,7 @@ def predict_restnet50_model(image):
     class_idx = int(prediction[0]) 
 
     # result = class_mapping[class_idx] + "_" + str(round(probabilities[class_idx],2))
-    result = class_mapping[class_idx] + "_" + str("no value")
+    result = class_mapping_resnet50[class_idx] + "_" + str("no value")
     # return {class_mapping[class_idx]: probabilities[class_idx]}
     return result
 
